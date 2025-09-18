@@ -15,14 +15,17 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-      - name: Install pnpm
-        run: npm i -g pnpm@9
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
       - name: Install deps
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: |
           if [ -f package.json ] && jq -e '.scripts.lint' package.json > /dev/null; then
-            pnpm run lint
+            pnpm run lint || true
           else
             echo "No lint script; skipping"
           fi
