@@ -14,12 +14,10 @@ A dark-themed Smart Habit Tracker app with glassmorphism UI that helps users bui
 - `pnpm run dev` then open http://localhost:3000
 
 ## Screenshots
-Add screenshots to `public/` and reference here:
 
-```markdown
-![Dashboard](public/placeholder.jpg)
-![Settings](public/placeholder-user.jpg)
-```
+![Dashboard](public/dashboard.png)
+
+![Settings](public/settings.png)
 
 ## Releases
 - Download prebuilt artifacts from the Releases tab: [Latest Release](https://github.com/rakeshacharyaaa/SMART-HABIT-TRACKER/releases)
