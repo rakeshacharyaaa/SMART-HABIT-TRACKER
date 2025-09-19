@@ -20,6 +20,8 @@ jobs:
         with:
           version: 9
           run_install: false
+      - name: Add pnpm to PATH
+        run: echo "$(pnpm store path --silent)/bin" >> $GITHUB_PATH
       - name: Install deps
         run: pnpm install --frozen-lockfile
       - name: Lint
